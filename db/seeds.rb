@@ -51,10 +51,11 @@ end
   )
 end
 
-Doctor.all.each do |doc|
+Doctor.all.each do |doctor|
   2.times do |index|
-    Specialty.create(
-      specialty_name: Specialty.find(rand(1..4))
+    DoctorsSpecialty.create!(
+      doctor: doctor,
+      specialty: Specialty.all.sample
     )
   end
 end
