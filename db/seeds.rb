@@ -52,7 +52,7 @@ end
 end
 
 Doctor.all.each do |doctor|
-  2.times do |index|
+  2.times do 
     DoctorsSpecialty.create!(
       doctor: doctor,
       specialty: Specialty.all.sample
